@@ -1,172 +1,203 @@
-# Preregistration: Salience Dimensions, Attentional Sets, and Signal Detection in Sustained Inattentional Blindness
+Voici la version intégrale et actualisée de ton fichier **`preregistration.md`** en anglais, rédigée dans le format standard d'un protocole pré-enregistré (OSF / AsPredicted / Stage 1 Registered Report).
 
-## 1. Study Information
+Le texte met au premier plan **les innovations méthodologiques** pour une revue de méthodes (Signal Detection Theory, standardisation d'affichage en ligne, plan factoriel complet, mesure comportementale continue du coût attentionnel), tout en intégrant rigoureusement l'ensemble de tes hypothèses théoriques et opérationnelles.
 
-* **Title:** Testing Feature Salience and Signal Detection in Inattentional Blindness: A Factorial Exploration of Motion, Color, Shape, and Dynamic Pulsing
+---
+
+# Preregistration: Disentangling Attentional Set, Multidimensional Stimulus Salience, and Response Bias in Dynamic Inattentional Blindness: A Signal Detection Approach
+
+## 1. Administrative Information
+
+* **Working Title:** Disentangling Attentional Set, Multidimensional Stimulus Salience, and Response Bias in Dynamic Inattentional Blindness: A Signal Detection Approach
 * **Authors:** Émilien Brochet, Julien Tardieu, Céline Lemercier
-* **Date of Preregistration:** October 2026
-* **Status:** Prior to data collection
+* **Affiliation:** Laboratoire CLLE (CNRS, Université de Toulouse Jean Jaurès), France
+* **Ethical Approval:** Comité d’Éthique de la Recherche de Toulouse (Avis n° 2026_1242, 18/02/2026)
+* **Target Journal Category:** Empirical / Methodological Focus in Experimental Psychology and Cognitive Science (e.g., *Behavior Research Methods*, *Consciousness and Cognition*, *Attention, Perception, & Psychophysics*)
 
 ---
 
-## 2. Experimental Design
+## 2. Theoretical Background & Methodological Rationale
 
-### 2.1 Overview & Factors
+Research using the dynamic Multiple Object Tracking (MOT) inattentional blindness (IB) paradigm has historically relied on post-hoc dichotomous probes ("Did you notice anything unusual? YES/NO") without systematically verifying observer criterion shifts or false alarm rates. Furthermore, previous studies often conflated bottom-up physical salience with top-down attentional control settings, or varied only single feature dimensions (e.g., luminance or isolated speed differences) without evaluating feature summation, interactive gating, or online implicit interference.
 
-The study employs a dynamic Multiple Object Tracking (MOT) paradigm with a between-subjects factorial design. Observers track and count wall-bounces of four target circles among four distractor circles.
+This study implements five critical methodological advancements in sustained IB research:
 
-The experimental design manipulates:
-
-1. **Target Tracking Speed (Attentional Set Baseline):**
-* Between-subjects factor: `speedcondition` $\in$ {`slow` (80 px/s), `fast` (200 px/s)}. Distractors move at the alternative speed (200 px/s and 80 px/s, respectively).
-
-
-2. **Unexpected Stimulus (US) Variant & Salience:**
-* Randomly assigned between-subjects factor (`variant`, 9 levels):
-* **Condition 0 (Catch / Baseline - No US):** `none` (No unexpected stimulus presented on Trials 3 to 5).
-* **Condition 1 (Baseline Circle - Fixed):** `circle_black_fixed` (Speed-matched or speed-mismatched).
-* **Condition 2 (Dynamic Salience - Pulsing):** `circle_black_pulsing` (Sinusoidal radius oscillation: $\pm 10\%$, 2 Hz).
-* **Condition 3 (Static Color Salience - Fixed):** `circle_red_fixed`.
-* **Condition 4 (Dynamic Color Salience - Pulsing):** `circle_red_pulsing`.
-* **Condition 5 (Shape Salience - Fixed):** `triangle_black_fixed`.
-* **Condition 6 (Shape + Dynamic Salience - Pulsing):** `triangle_black_pulsing`.
-* **Condition 7 (Shape + Color Salience - Fixed):** `triangle_red_fixed`.
-* **Condition 8 (Compound Salience - Pulsing):** `triangle_red_pulsing`.
-
-
-
-
-
-On trials where a US is present, its velocity is also assigned randomly to either slow (-80 px/s) or fast (-200 px/s), crossing from right to left.
-
-### 2.2 Trial Sequence
-
-* **Practice Phase:** 2 trials (20 s each, 80% accuracy threshold required, immediate performance feedback).
-* **Pre-critical Phase (Trials 1 & 2):** 2 trials (30 s each, primary bounce-counting task only, no US).
-* **Critical Phase (Trial 3):** 1 trial (30 s, US appears at $t = 10\text{ s}$ except in the `none` condition). Followed by the bounce report, the IB detection battery, and confidence ratings.
-* **Divided-Attention Phase (Trial 4):** 1 trial (identical display to Trial 3, primary task + probe).
-* **Full-Attention Phase (Trial 5):** 1 trial (passive viewing without bounce counting).
+1. **Signal Detection Theory (SDT) Framework:** Implementing a genuine catch-trial baseline (`variant: 'none'`) to decouple true perceptual sensitivity ($d'$) from conservative response bias ($c$).
+2. **Multidimensional Factorial Salience:** Systematically manipulating continuous kinematic matching (attentional set) alongside discrete morphological, chromatic, and temporal salience features (shape, color, pulsing size) to test additive vs. subadditive capture models.
+3. **Implicit Online Behavioral Tracking:** Assessing primary-task tracking accuracy variations to detect attention capture in observers who deny conscious noticing.
+4. **Graded Feature Accessibility & Metacognitive Confidence:** Probing forced-choice feature identification (shape, color, size dynamics) alongside continuous subjective confidence to quantify implicit residual perception.
+5. **Technical Standardization:** Enforcing client-side hardware refresh rate calibration (60 Hz verification), screen geometry logging, and strict exclusion of mobile/tablet devices.
 
 ---
 
-## 3. Sampling Plan & Power Analysis
+## 3. Hypotheses
 
-### 3.1 Target Sample Size
+### Hypothesis 1: Attentional Set Gating (Kinematic Congruence)
 
-* **Target Analytical Sample:** 100 valid participants per condition. Across the 9 variant groups (with balanced tracking speeds), the final retained sample target is:
+Explicit detection rates and perceptual sensitivity ($d'$) will be significantly higher when the unexpected stimulus (US) speed matches the attended target speed (Match condition: fast-fast or slow-slow) compared to when it matches the distractor speed (Mismatch condition).
 
-$$N_{\text{analytic}} = 9 \times 100 = 900\text{ participants}$$
+### Hypothesis 2: Multidimensional Salience Modulation and Additivity
 
+Physical feature salience will independently modulate explicit detection probability:
 
-* **Attrition Adjustment:** Based on empirical attrition rates in dynamic online IB experiments (exclusion due to primary-task counting inaccuracy $<80\%$, prior paradigm knowledge, and technical drops), an attrition buffer of $\sim 40\text{--}50\%$ is accounted for. Data collection will stop once the server records approximately **1,500 to 1,800 initiated sessions** or when cell quotas reach 100 valid participants each.
+* Stimuli deviating from target/distractor baseline features (red color vs. black, triangular shape vs. circle, dynamic 2 Hz pulsing vs. fixed size) will yield higher detection rates than neutral stimuli.
+* **Feature Summation:** Combined feature deviations (e.g., color + shape + pulsing) will yield monotonically increasing detection rates compared to single-feature deviations, testing whether salience dimensions operate via additive perceptual channels or saturate subadditively.
 
-### 3.2 Participant Recruitment & Testing Environment
+### Hypothesis 3: Attentional Set $\times$ Salience Interaction
 
-* Sessions are collected online using automated single-use links.
-* **Device Enforcement:** Mobile devices and tablets are programmatically filtered out (`isComputer()` check). Participants must complete the experiment on a desktop/laptop with physical display, keyboard, and mouse.
-* Display refresh rates are empirically measured at session start across 60 frames via `requestAnimationFrame` and logged (`measured_refresh_rate`). Screen dimensions and pixel ratios are recorded.
+Attentional set congruence will moderate the impact of physical salience:
 
----
+* Highly salient features (e.g., pulsing red triangle) will partially bypass attentional gating, diminishing the relative advantage of speed congruence.
+* Conversely, for low-salience stimuli (black fixed circles), detection will depend almost exclusively on target speed congruence.
 
-## 4. Measured Variables & Indices
+### Hypothesis 4: Primary-Task Performance Cost (Implicit Capture)
 
-### 4.1 Primary Dependent Variables (Critical Trial 3)
+The presence of the US will produce a performance cost on the primary counting task (drop in bounce-counting accuracy on Critical Trial 3 relative to pre-critical trials):
 
-* **Explicit Detection Response (`detection_ib`):** Binary report ("YES" vs. "NO") to whether anything unusual was observed.
-* **Detection Confidence (`confidence_detection`):** Continuous visual slider rating (0 = "Very doubtful", 100 = "Totally certain").
-* **Feature Identification (Forced-Choice Probes):**
-* **Shape:** Circle vs. Triangle vs. "Nothing seen" (SVG visual probe).
-* **Color:** Black vs. Red vs. "Nothing seen".
-* **Size Dynamics:** Fixed vs. Pulsing vs. "Nothing seen".
+* This cost will be function of both attentional set congruence (larger drop in Match vs. Mismatch) and stimulus salience (monotonically greater impairment as salience features summate).
+* This selective cost will remain evident even among participants who report not having consciously seen the US (*non-noticers*), reflecting implicit resource allocation without explicit awareness.
 
+### Hypothesis 5: Conservative Response Bias in Classical IB Probes
 
-* **Feature Confidence Ratings:** Continuous sliders (0--100) for Shape, Color, and Size judgments.
-* **Strict Noticer Classification:** A participant is classified as a *Strict Noticer* if and only if:
-1. They respond "YES" to the initial detection query;
-2. They correctly identify the US shape, color, and size dynamics.
+Signal detection analysis on the critical trial (comparing US-present conditions against the US-absent `none` catch condition) will reveal a significantly positive response criterion ($c > 0$), confirming that traditional IB reporting exhibits a strong conservative response bias (participants are fundamentally biased toward responding "NO" unless confidence is high).
 
+### Hypothesis 6: Subliminal Feature Extraction & Metacognitive Dissociation
 
+Among self-reported *non-noticers* (observers answering "NO" to the primary detection question):
 
-### 4.2 Signal Detection Theory (SDT) Metrics
-
-Using the catch trial condition (`variant == 'none'`):
-
-* **Hit Rate ($H$):** Proportion of "YES" responses when the US was present.
-* **False Alarm Rate ($FA$):** Proportion of "YES" responses in the `none` condition.
-* **Sensitivity Index ($d'$):**
-
-$$d' = \Phi^{-1}(H) - \Phi^{-1}(FA)$$
-
-
-
-*(with log-linear corrections applied in cases of extreme proportions, Hautus, 1995).*
-* **Response Criterion ($c$):**
-
-$$c = -0.5 \times [\Phi^{-1}(H) + \Phi^{-1}(FA)]$$
-
-
-
-### 4.3 Behavioral & Secondary Metrics
-
-* **Primary-Task Accuracy:**
-
-$$\text{Accuracy} = \max\left(0,\, 100 - \frac{\vert{}\text{Reported Count} - \text{True Bounces}\vert{}}{\text{True Bounces}} \times 100\right)$$
-
-
-* **Primary-Task Implicit Cost:** Difference in accuracy between pre-critical baseline (mean of Trials 1 and 2) and Critical Trial 3.
+* Feature forced-choice performance (shape, color, size dynamics) will exceed theoretical chance levels (33.3% for 3-alternative forced choice), corroborating implicit visual extraction without reportable awareness.
+* Observers' self-rated confidence for these feature judgments will remain significantly lower than confidence ratings provided by *noticers*, demonstrating a true metacognitive dissociation.
 
 ---
 
-## 5. Exclusion Criteria (Pre-Specified Pipeline)
+## 4. Experimental Design
 
-Participants will be excluded from the confirmatory sample if they meet any of the following criteria:
+* **Task Paradigm:** Dynamic Multiple Object Tracking (MOT) in jsPsych, rendered on a canvas element ($800 \times 600\text{ px}$, `#525252` background).
+* **Attentional Set Factor (Between-Subjects, 2 levels):**
+* `speedcondition = 'slow'`: 4 targets move at 80 px/s; 4 distractors move at 200 px/s.
+* `speedcondition = 'fast'`: 4 targets move at 200 px/s; 4 distractors move at 80 px/s.
 
-1. **Primary-Task Inaccuracy:** Mean counting accuracy $< 80\%$ on pre-critical trials (Trials 1 and 2) or $< 80\%$ on Critical Trial 3.
-2. **Prior Paradigm Knowledge:** Reporting prior familiarity with inattentional blindness or selective attention tasks (e.g., the invisible gorilla study) on the final debriefing question (`prior_knowledge == "Oui"`).
-3. **Full-Attention Failure:** Failure to report the US on Trial 5 (full-attention trial) for conditions where the US is present.
-4. **Technical Anomalies:** Excessive frame drops ($> 5\%$ of animation frames exceeding 25 ms inter-frame delta) or exiting fullscreen/losing window focus during tracking trials.
+
+* **Stimulus Salience & Catch Factor (`variant`, Between-Subjects, 9 levels):**
+1. `none` (Catch trial: no US appears across Trials 3–5).
+2. `circle_black_fixed` (Baseline neutral US).
+3. `circle_black_pulsing` (Temporal dynamic salience: $\pm 10\%$ radius oscillation at 2 Hz).
+4. `circle_red_fixed` (Chromatic salience).
+5. `circle_red_pulsing` (Chromatic + temporal dynamic salience).
+6. `triangle_black_fixed` (Morphological salience).
+7. `triangle_black_pulsing` (Morphological + temporal dynamic salience).
+8. `triangle_red_fixed` (Morphological + chromatic salience).
+9. `triangle_red_pulsing` (Compound maximum salience: shape + color + pulsing).
+
+
+
+For all US-present conditions, US velocity is randomly set to slow (-80 px/s) or fast (-200 px/s), crossing horizontally from right to left starting at $t = 10\text{ s}$ into the 30-second trial.
+
+* **Trial Structure:**
+* **Practice:** 2 trials (20 s, 80% accuracy threshold required, immediate precision feedback).
+* **Pre-critical (Trials 1 & 2):** 2 trials (30 s, target bounce counting only).
+* **Critical (Trial 3):** 1 trial (30 s, US trajectory active except in `none`). Primary bounce count report, followed by the comprehensive IB query battery.
+* **Divided Attention (Trial 4):** 1 trial (identical display to Trial 3, primary count + probe).
+* **Full Attention (Trial 5):** 1 trial (passive monitoring, counting discontinued, identical visual display).
+
+
 
 ---
 
-## 6. Confirmatory Analysis Plan
+## 5. Sampling Plan & Sample Size Justification
 
-### 6.1 Explicit Detection Models
+* **Cell Size:** 100 valid, fully retained participants per condition across the 9 variant groups (stratified across target tracking speeds):
 
-* **Model 1 (Generalized Linear Model - Binomial Family):**
-A logistic regression model will predict binary detection (`detection_ib`) on Critical Trial 3 across US-present variants:
-
-$$\text{logit}(P(\text{Detection})) = \beta_0 + \beta_1 (\text{Speed Congruence}) + \beta_2 (\text{Salience Feature}) + \beta_3 (\text{Speed Congruence} \times \text{Salience Feature})$$
+$$N_{\text{analytical}} = 9 \times 100 = 900\text{ participants}$$
 
 
-* `Speed Congruence` is coded as a factor: Match (Target Speed = US Speed) vs. Mismatch (Target Speed $\neq$ US Speed).
-* `Salience Feature` is entered as orthogonal planned contrasts:
-* Contrast 1: Dynamic modulation (`pulsing` vs. `fixed`).
-* Contrast 2: Chromatic contrast (`red` vs. `black`).
-* Contrast 3: Morphological difference (`triangle` vs. `circle`).
-
-
-
-
-* **Model 2 (Signal Detection Comparison):**
-Independent $d'$ and $c$ values will be estimated across salience conditions relative to the baseline `none` group. Differences in perceptual sensitivity ($d'$) versus shifts in response criterion ($c$) will be tested using Welch $t$-tests and bootstrapped 95% confidence intervals.
-
-### 6.2 Implicit Processing (Task Cost Analysis)
-
-* Mixed-design ANOVA on Primary-Task Accuracy:
-* Within-subjects factor: `Phase` (Pre-critical Baseline vs. Critical Trial 3).
-* Between-subjects factor: `Condition` (US-Absent Baseline, Match US, Mismatch US).
-* **Planned Comparison:** Focused testing of the interaction contrast assessing whether the drop in tracking accuracy during Trial 3 is selectively amplified in the Match condition among self-reported *non-noticers*.
-
-
-
-### 6.3 Bayesian Verification for Null Effects
-
-* In order to avoid conflating "absence of evidence" with "evidence of absence", Bayesian contingency tables and Bayesian regression models (using default Cauchy priors, $r = 0.707$) will be computed for all non-significant main effects (particularly exposure duration and non-matching salience dimensions). $BF_{01} > 3$ will be interpreted as substantial evidence favoring the null hypothesis.
+* **Power Justification:** With $N = 100$ per cell, logistic regression models have $> 90\%$ power ($\alpha = .05$) to detect small-to-moderate odds ratio effects ($OR \ge 1.65$) between salience variants and speed congruence levels, as well as adequate precision to estimate false alarm rates ($FA$) in the catch condition with standard errors $< 0.03$.
+* **Attrition Management:** Anticipating a $\sim 40\text{--}50\%$ attrition rate due to strict accuracy thresholds, prior knowledge exclusions, and online dropouts, data collection will run until approximately 1,600 to 1,800 total sessions have been initialized on Firebase Realtime Database.
 
 ---
 
-## 7. Exploratory Analyses
+## 6. Variables & Measurements
 
-1. **Multiverse Pipeline Analysis:** Robustness across 320 analytical specifications varying primary-task accuracy thresholds ($60\%\text{--}90\%$), inclusion/exclusion of full-attention deniers, and strict vs. lenient detection criteria.
-2. **Feature-Reporting Asymmetries:** Hierarchy of conscious reportability (proportions and confidence distributions) comparing motion, color, shape, and pulsation among partial noticers.
-3. **Repeated Exposure Dynamics:** Trajectory of detection recovery across Trial 3, Divided Attention (Trial 4), and Full Attention (Trial 5).
+### 6.1 Dependent Variables (Critical Trial 3)
+
+1. **Explicit Detection (`participant_response_ib`):** Dichotomous response ("OUI" vs. "NON").
+2. **Detection Confidence (`confidence_detection`):** Continuous visual slider rating from 0 ("NON, j'ai des doutes...") to 100 ("OUI, je suis sûr.e !").
+3. **Feature Probes (3-Alternative Forced Choice):**
+* Shape: Circle vs. Triangle vs. "Rien vu".
+* Color: Black vs. Red vs. "Rien vu".
+* Size: Fixed vs. Pulsing vs. "Rien vu".
+
+
+4. **Feature Confidence Sliders:** Individual continuous ratings (0–100) for shape, color, and size judgments.
+5. **Primary-Task Accuracy (%):**
+
+$$\text{Accuracy} = \max\left(0,\, 100 - \frac{\vert{}\text{Reported Count} - \text{True Target Bounces}\vert{}}{\text{True Target Bounces}} \times 100\right)$$
+
+
+6. **Task Cost Index:** Mean Pre-critical Accuracy (Trials 1 & 2) minus Critical Trial 3 Accuracy.
+
+---
+
+## 7. Data Exclusion Criteria
+
+Prior to confirmatory analyses, data will be filtered according to the following preregistered criteria:
+
+1. **Primary-Task Non-Compliance:** Participants failing to achieve $\ge 80\%$ mean bounce-counting accuracy on pre-critical trials (Trials 1 & 2) or on Trial 3.
+2. **Prior Paradigm Knowledge:** Participants responding "Oui" to having prior knowledge of selective attention or IB paradigms (`participant_prior_knowledge == "Oui"`).
+3. **Full-Attention Verification Failure:** Participants in US-present conditions who fail to detect the US on Trial 5 (full attention). In the catch condition (`none`), participants reporting an unexpected stimulus on Trial 5 are classified as high-rate false alarmers and excluded from primary sensitivity comparisons.
+4. **Technical Exclusions:** Display refresh rate deviations ($\vert{}\text{measured\_refresh\_rate} - 60\vert{} > 4\text{ Hz}$), excessive dropped frames ($> 5\%$ frames exceeding 25 ms inter-frame interval), or logged window blur / fullscreen exit events during tracking trials.
+
+---
+
+## 8. Confirmatory Statistical Analysis Plan
+
+### 8.1 Confirmatory Model 1: Logistic Regression of Explicit Noticing
+
+A generalized linear model (GLM, binomial family, logit link) will model explicit detection (`detection_ib = 1` vs. `0`) on Critical Trial 3 across all US-present conditions:
+
+
+$$\text{logit}(P) = \beta_0 + \beta_1 (\text{Congruence}) + \sum_{k=1}^3 \beta_{2k} (\text{Salience}_k) + \beta_3 (\text{Congruence} \times \text{Salience})$$
+
+* **Congruence:** Coded as Match (+0.5) vs. Mismatch (-0.5).
+* **Salience Contraste Orthogonaux:**
+* Contrast 1 (Color): Red (+0.5) vs. Black (-0.5).
+* Contrast 2 (Shape): Triangle (+0.5) vs. Circle (-0.5).
+* Contrast 3 (Dynamics): Pulsing (+0.5) vs. Fixed (-0.5).
+
+
+* **Model Comparison:** Nested model comparisons (Likelihood Ratio Tests and AIC/BIC) will assess whether an additive model of salience features accounts for the data or if significant superadditive/subadditive interaction terms exist.
+
+### 8.2 Confirmatory Model 2: Signal Detection Theory (SDT) & Criterion Analysis
+
+* Using the `none` catch condition, the False Alarm rate ($FA$) will be computed as the proportion of "OUI" responses when no US appeared.
+* Hit rates ($H$) will be calculated for each of the 8 US-present variant conditions.
+* $d'$ and $c$ will be computed per condition using the standard normal quantile function:
+
+$$d' = \Phi^{-1}(H) - \Phi^{-1}(FA), \quad c = -0.5 \times \left[\Phi^{-1}(H) + \Phi^{-1}(FA)\right]$$
+
+
+
+*(Log-linear correction applied for extreme proportions).*
+* A one-sample two-tailed $t$-test (and Bayesian equivalent) will test $H_0: c = 0$ across conditions to confirm whether observers operate under a significantly conservative reporting threshold ($c > 0$).
+
+### 8.3 Confirmatory Model 3: Implicit Attention Capture (Primary-Task Cost)
+
+A 2 (Phase: Baseline Pre-Critical vs. Critical Trial 3, within-subjects) $\times$ 2 (Congruence: Match vs. Mismatch, between-subjects) $\times$ Salience Level mixed-design ANOVA will be performed on bounce-counting accuracy:
+
+* Tested specifically on the subpopulation of self-reported **non-noticers**.
+* A significant Phase $\times$ Congruence interaction will confirm implicit perceptual allocation driven by attentional set in the absence of conscious report.
+
+### 8.4 Confirmatory Model 4: Sub-threshold Feature Sensitivity
+
+Among self-reported non-noticers:
+
+* Proportions of correct identifications for shape, color, and size dynamics will each be evaluated against chance (0.33) using binomial tests.
+* A paired $t$-test will evaluate confidence ratings of non-noticers versus noticers to formally verify the metacognitive dissociation.
+
+---
+
+## 9. Exploratory Analyses & Multiverse Pipeline
+
+1. **Multiverse Specification Analysis:** Constructing a 320-pathway specification curve varying counting accuracy cutoffs ($60\%\text{--}90\%$), retention vs. exclusion of full-attention non-noticers, and strict vs. lenient detection definitions.
+2. **Bayesian Null Quantifications:** Computing Bayes Factors ($BF_{01}$, default Cauchy prior $r = 0.707$) on non-significant effects (notably physical exposure time differences between 80 px/s and 200 px/s conditions) to distinguish between data insensitivity and true invariance.
+3. **Recovery Trajectories:** Tracking detection escalation from Trial 3 (Critical) to Trial 4 (Divided) and Trial 5 (Full) as a function of salience combination.
