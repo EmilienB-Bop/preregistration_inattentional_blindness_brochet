@@ -148,7 +148,7 @@ Prior to confirmatory analyses, data will be filtered according to the following
 1. **Primary-Task Non-Compliance:** Participants failing to achieve $\ge 80\%$ mean bounce-counting accuracy on pre-critical trials (Trials 1 & 2) or on Trial 3.
 2. **Prior Paradigm Knowledge:** Participants responding "Oui" to having prior knowledge of selective attention or IB paradigms (`participant_prior_knowledge == "Oui"`).
 3. **Full-Attention Verification Failure:** Participants in unexpected-stimulus-present conditions who fail to report noticing the stimulus on Trial 5 (full attention). In the catch condition (`none`), participants reporting an unexpected stimulus on Trial 5 are classified as chronic false alarmers and excluded from primary sensitivity comparisons.
-4. **Technical Exclusions:** Display refresh rate deviations ($\vert{}\text{measured\_refresh\_rate} - 60\text{ Hz}\vert{} > 4\text{ Hz}$), excessive dropped frames ($> 5\%$ frames exceeding 25 ms inter-frame interval), or logged window `blur` or `fullscreenexit` events during tracking trials.
+4. **Technical Exclusions:** Display refresh rate deviations (Display refresh rate deviations greater than 4 Hz from the 60 Hz baseline (i.e., measured refresh rate outside the 56–64 Hz window)), excessive dropped frames ($> 5\%$ frames exceeding 25 ms inter-frame interval), or logged window `blur` or `fullscreenexit` events during tracking trials.
 5. **Bot Flag Exclusions:** Any session triggering the hidden honeypot input field (`user_contact_confirmation`) or exhibiting submission response times below human feasibility ($RT < 1200\text{ ms}$ on demographic inputs; `is_bot_detected == true`).
 
 ---
