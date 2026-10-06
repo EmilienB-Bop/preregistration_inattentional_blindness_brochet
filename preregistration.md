@@ -1,9 +1,3 @@
-Voici la version intégrale et actualisée de ton fichier **`preregistration.md`** en anglais, rédigée dans le format standard d'un protocole pré-enregistré (OSF / AsPredicted / Stage 1 Registered Report).
-
-Le texte met au premier plan **les innovations méthodologiques** pour une revue de méthodes (Signal Detection Theory, standardisation d'affichage en ligne, plan factoriel complet, mesure comportementale continue du coût attentionnel), tout en intégrant rigoureusement l'ensemble de tes hypothèses théoriques et opérationnelles.
-
----
-
 # Preregistration: Disentangling Attentional Set, Multidimensional Stimulus Salience, and Response Bias in Dynamic Inattentional Blindness: A Signal Detection Approach
 
 ## 1. Administrative Information
